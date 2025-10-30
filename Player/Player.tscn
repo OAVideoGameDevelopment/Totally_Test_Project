@@ -1,17 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp5bv2g1ydavl"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_yg0ns"]
-[ext_resource type="Texture2D" uid="uid://vu0c2patvoh2" path="res://Images/Kurisu pfp.jpg" id="2_1ixda"]
+[ext_resource type="Script" uid="uid://546ym7muel36" path="res://Player/player.gd" id="1_yg0ns"]
+[ext_resource type="Texture2D" uid="uid://c603velf6orgn" path="res://Images/mad scientist.jpg" id="2_q3lat"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y60p4"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
+size = Vector2(9.099999, 12.1)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_yg0ns")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_1ixda")
+position = Vector2(17.625, 19.599998)
+scale = Vector2(0.49054056, 0.44411764)
+texture = ExtResource("2_q3lat")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource("CircleShape2D_y60p4")
+position = Vector2(17.5, 19.499998)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_q3lat")

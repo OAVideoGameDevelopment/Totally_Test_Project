@@ -1,8 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxass6jkvmten"]
+[gd_scene load_steps=6 format=3 uid="uid://bxass6jkvmten"]
 
 [ext_resource type="PackedScene" uid="uid://bp5bv2g1ydavl" path="res://Player/Player.tscn" id="1_c5kd8"]
+[ext_resource type="PackedScene" uid="uid://cbx0yhwl5jmq7" path="res://Mayuri/Mayuri.tscn" id="2_y6flb"]
+[ext_resource type="PackedScene" uid="uid://boom77xx6tgwd" path="res://GUI/TimesSavedMayuri.tscn" id="3_il6x7"]
+[ext_resource type="Script" uid="uid://dnlqmlsbdf81q" path="res://GUI/times_saved_mayuri.gd" id="4_o14yy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6flb"]
+size = Vector2(1151, 651)
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_c5kd8")]
 position = Vector2(524, 265)
+
+[node name="Mayuri" parent="." instance=ExtResource("2_y6flb")]
+position = Vector2(395, 273)
+pickupScene = ExtResource("2_y6flb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(575.5, 325.5)
+shape = SubResource("RectangleShape2D_y6flb")
+
+[node name="TimesSavedMayuri" parent="." instance=ExtResource("3_il6x7")]
+script = ExtResource("4_o14yy")
+
+[connection signal="savedMayuri" from="Mayuri" to="TimesSavedMayuri" method="_on_mayuri_saved_mayuri"]
