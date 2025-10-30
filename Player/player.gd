@@ -4,6 +4,7 @@ extends CharacterBody2D
 #please look away pretty please; this is far later
 #Also advance programmers: Hello!!! 
 #I'm only taking the most optimal answer: GLGL
+#HELLO FELLOW PROGRAMMERS!!!! - bung1r Nguyen
 
 func _physics_process(delta: float) -> void:
 	pass
