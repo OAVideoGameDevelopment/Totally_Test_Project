@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbx0yhwl5jmq7"]
+
+[ext_resource type="Script" uid="uid://cj5ov5sg41e2j" path="res://Mayuri/mayuri.gd" id="1_mda05"]
+[ext_resource type="Texture2D" uid="uid://eebiu55j62fl" path="res://Images/mayuri.jpg" id="1_nvte1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xjg7"]
+size = Vector2(58, 76)
+
+[node name="Mayuri" type="Area2D"]
+script = ExtResource("1_mda05")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.2499981, 0)
+shape = SubResource("RectangleShape2D_1xjg7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.37500012, -0.5000019)
+scale = Vector2(0.30283505, 0.2961538)
+texture = ExtResource("1_nvte1")
+
+[connection signal="savedMayuri" from="." to="." method="_on_saved_mayuri"]
