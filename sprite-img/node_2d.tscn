@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d08u8h6sixbir"]
+
+[ext_resource type="Texture2D" uid="uid://bprba6ac8xrxi" path="res://Cosmo img/Screenshot 2025-10-28 174548.png" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wtcfe")
