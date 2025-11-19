@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-#If you stumbled upon this file, this is for the advance programmers. 
-#please look away pretty please; this is far later
-#Also advance programmers: Hello!!! 
-#I'm only taking the most optimal answer: GLGL
-
 func _physics_process(delta: float) -> void:
-	pass
-	#this is your only hint and also use docs ;)
+	var input_vector = Vector2.ZERO
+	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	
+	velocity = input_vector.normalized() * 300
+	
+	move_and_slide()

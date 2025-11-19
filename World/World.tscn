@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxass6jkvmten"]
+[gd_scene load_steps=4 format=3 uid="uid://bxass6jkvmten"]
 
 [ext_resource type="PackedScene" uid="uid://bp5bv2g1ydavl" path="res://Player/Player.tscn" id="1_c5kd8"]
+[ext_resource type="Texture2D" uid="uid://bpdws2jdlsw7c" path="res://Images/Screenshot 2025-10-28 174548.png" id="2_y6flb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlekv"]
+size = Vector2(216, 213)
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_c5kd8")]
-position = Vector2(524, 265)
+position = Vector2(597, 330)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Player"]
+position = Vector2(0, -1)
+scale = Vector2(0.5219512, 0.51946473)
+texture = ExtResource("2_y6flb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_mlekv")
