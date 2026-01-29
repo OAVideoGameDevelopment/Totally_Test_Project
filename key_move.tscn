@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxcqyy3nl8wn8"]
+
+[ext_resource type="Script" uid="uid://coxvpmvfkouii" path="res://key_move.gd" id="1_kisdb"]
+[ext_resource type="Texture2D" uid="uid://bfkhvbddyl8j4" path="res://Images/Screenshot 2026-01-21 160123.png" id="2_kv8vp"]
+
+[node name="key_move" type="Node2D"]
+script = ExtResource("1_kisdb")
+
+[node name="Screenshot20260121160123" type="Sprite2D" parent="."]
+position = Vector2(572.5, 347.25)
+scale = Vector2(1.7453988, 1.3630491)
+texture = ExtResource("2_kv8vp")

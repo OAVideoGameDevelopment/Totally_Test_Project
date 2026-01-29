@@ -5,6 +5,8 @@ extends CharacterBody2D
 #Also advance programmers: Hello!!! 
 #I'm only taking the most optimal answer: GLGL
 
-func _physics_process(delta: float) -> void:
-	pass
-	#this is your only hint and also use docs ;)
+func _physics_process(_delta: float) -> void:
+	#this is your only hint and also use docs
+	if (Input.is_anything_pressed()):
+		print("help")
+		position.x += 1
